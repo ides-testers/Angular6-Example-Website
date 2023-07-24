@@ -15,3 +15,9 @@ jobs:
           
         run: |
           wget https://downloads.genuitec.com/downloads/codetogether/extension/ct$TIMESTAMP/codetogether-$VERSION-0$TIME.zip
+      
+      - name: Run npm install
+          
+        run: |
+          npm install
+     
