@@ -22,7 +22,7 @@ jobs:
       
       - name: Verify Git
         run: |
-          git -version
+          git --version
           
       - name: Download CodeTogether
         env:
