@@ -7,14 +7,19 @@ jobs:
     name: Run CodeTogether-Production-Tests
     runs-on: windows-latest
     steps:
-      - name: Download CodeTogether
-        env:
-          $VERSION: "2023.1.1"
-          $TIMESTAMP: "20230419"
-          $TIME: "1410"
+      - name: Download and setup wget
           
         run: |
-          curl.exe https://downloads.genuitec.com/downloads/codetogether/extension/ct"$TIMESTAMP"/codetogether-"$VERSION"-0"$TIME".zip
+          curl http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe
+          start wget-1.11.4-1-setup.exe
+      - name: Download CodeTogether
+        env:
+          VERSION: 2023.1.1
+          TIMESTAMP: 20230419
+          TIME: 1410
+          
+        run: |
+          curl.exe https://downloads.genuitec.com/downloads/codetogether/extension/ct$TIMESTAMP/codetogether-$VERSION-0$TIME.zip
       
       - name: Run npm install
           
