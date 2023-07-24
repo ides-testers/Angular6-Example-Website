@@ -10,7 +10,7 @@ jobs:
       - name: Download and setup wget
           
         run: |
-          curl http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe
+          curl http://downloads.sourceforge.net/project/gnuwin32/wget/1.11.4-1/wget-1.11.4-1-setup.exe
           start wget-1.11.4-1-setup.exe
       - name: Download CodeTogether
         env:
@@ -19,7 +19,7 @@ jobs:
           TIME: 1410
           
         run: |
-          curl.exe https://downloads.genuitec.com/downloads/codetogether/extension/ct$TIMESTAMP/codetogether-$VERSION-0$TIME.zip
+          wget https://downloads.genuitec.com/downloads/codetogether/extension/ct$TIMESTAMP/codetogether-$VERSION-0$TIME.zip
       
       - name: Run npm install
           
