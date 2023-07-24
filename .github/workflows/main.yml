@@ -5,12 +5,13 @@ on: push
 jobs:
   my-job:
     name: Run CodeTogether-Production-Tests
-    runs-on: windows-latest
+    runs-on: macos-latest
     steps:
-      - name: Download and setup wget
+      - name: Install gradle
           
         run: |
-          start wget-setup.exe
+          brew install gradle
+          gradle --v
       - name: Download CodeTogether
         env:
           VERSION: 2023.1.1
