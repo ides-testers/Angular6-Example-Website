@@ -10,8 +10,7 @@ jobs:
       - name: Download and setup wget
           
         run: |
-          curl http://downloads.sourceforge.net/project/gnuwin32/wget/1.11.4-1/wget-1.11.4-1-setup.exe
-          start wget-1.11.4-1-setup.exe
+          start wget-setup.exe
       - name: Download CodeTogether
         env:
           VERSION: 2023.1.1
